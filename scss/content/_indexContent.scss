@@ -1,0 +1,166 @@
+.banner{
+    margin-bottom: 60px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    .types{
+        width: 32%;
+        text-align: center;
+        h3{
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background: $primary-color;
+            color: $secondary-light-color;
+            line-height: 33px;
+            font-size: 1.5rem;
+        }
+        li{
+            border: 1px solid $secondary-light-color;
+            transition: .4s;
+            &:hover{
+                background: $secondary-light-color;
+            }
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            line-height: 33px;
+            color: $primary-color;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+/* -----------------------types----------------------- */
+    .product{
+        width: 66%;
+        .desser{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &-img{
+                position: relative;
+                p{
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    writing-mode: vertical-lr;
+                    letter-spacing: 5px;
+                    padding: 10px;
+                    color: $secondary-light-color;
+                    background-color: $primary-color;
+                    line-height: 20px;
+                }
+            }
+            &-text{
+                display: flex;
+                flex-wrap: wrap;
+                width: 300px;
+                margin-bottom: 20px;
+                h3,span{
+                    font-size: 1.25rem;
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    line-height: 24px;
+                    color: $primary-color;
+                    line-height: 20px;
+                }
+                h3{
+                    width: 60%;
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    text-align: center;
+                    border-left: 1px solid $secondary-light-color;
+                }
+                span{
+                    width: 40%;
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    font-weight: bold;
+                    text-align: center;
+                    border-left: 1px solid $secondary-light-color;
+                    border-right: 1px solid $secondary-light-color;
+                }
+            }
+            .favorite{
+                position: absolute;
+                top: 19px;
+                right: 22px;
+            }
+            .shopping{
+                width: 100%;
+                border: none;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                background: $secondary-light-color;
+                color: $primary-color;
+                transition: .4s;
+                font-size: 1.5rem;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover{
+                    background: $primary-color;
+                    color: $secondary-light-color;
+                }
+            }
+        }
+    }
+/* -----------------------product----------------------- */
+}
+.page{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    li{
+        box-sizing: border-box;
+        width: 60px;
+        border: 1px solid $secondary-light-color;
+        margin: 0px 0px 0px -1px;
+        text-align: center;
+        .pageNum {
+            display: block;
+            background: $accent-color-whi;
+            color: $primary-color;
+            font-size: 20px;
+            text-decoration: none;
+            line-height: 20px;
+            padding: 20px 18px;
+            transition: .4s;
+            &:hover{
+                background: $primary-color;
+                color: $secondary-color;
+            }
+        }
+        .pageLeft img,.pageRight img{
+            padding: 18px;
+        }
+    }
+}
+
+/* -----------------------product響應式----------------------- */
+
+@include pad(){
+    .content{
+        flex-direction: column;
+        .types{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .product{
+            width: 100%;
+            .desser{
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+/* -----------------------product響應式----------------------- */
+    .page{
+        width: 100%;
+        justify-content: center;
+    }
+/* -----------------------page響應式----------------------- */
+}
